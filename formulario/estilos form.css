@@ -1,0 +1,59 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background: #b77676;
+	font-family:Arial, Helvetica, sans-serif;
+	color: #111
+}
+
+.card_cadastro {
+	display: flex;
+	flex-direction: column;
+	background: #FFF;
+	width: 80vw;
+	max-width: 450px;
+	padding: 30px;
+	border-radius: 10px
+}
+
+.card_cadastro h2 {
+	margin-bottom: 5px
+}
+
+
+
+.card_cadastro label {
+	margin: 10px 0;
+	margin-left: 10px;
+	font-weight: bold;
+	
+}
+
+.card_cadastro input {
+	padding: 10px;
+	border: none;
+	border-radius: 25px;
+	background-color: #cc290078;
+	box-shadow: 1px 1px 2px #9dbfaf;
+	
+}
+
+.card_cadastro button {
+	margin: 30px 0 10px;
+	padding: 10px;
+	border: none;
+	border-radius: 10px;
+	background: #622718;
+	color: #FFF;
+	cursor: pointer;
+	text-transform: uppercase
+}
