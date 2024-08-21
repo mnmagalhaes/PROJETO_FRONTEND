@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Simples</title>
+</head>
+<body>
+    <h1>Calculadora Simples</h1>
+    <div id="resultado">
+        <!-- Resultados serão exibidos aqui -->
+    </div>
+
+    <script>
+        // Função principal do script
+        function main() {
+            // Solicita ao usuário o primeiro número
+            var valor1 = parseInt(prompt("Digite o 1º Valor:"));
+
+            // Solicita ao usuário o segundo número
+            var valor2 = parseInt(prompt("Digite o 2º Valor:"));
+
+            // Solicita ao usuário a operação desejada
+            var operacao = prompt("Digite a operação desejada (soma, subtração, multiplicação, divisão):");
+
+            // Variável para armazenar o resultado
+            var resultado;
+
+            // Calcula o resultado com base na operação escolhida
+            if (operacao === "soma") {
+                resultado = valor1 + valor2;
+            } else if (operacao === "subtração") {
+                resultado = valor1 - valor2;
+            } else if (operacao === "multiplicação") {
+                resultado = valor1 * valor2;
+            } else if (operacao === "divisão") {
+                if (valor2 !== 0) {
+                    resultado = valor1 / valor2;
+                } else {
+                    console.log("Erro: Divisão por zero não é permitida.");
+                    document.getElementById('resultado').innerHTML = "<h2>Erro: Divisão por zero não é permitida.</h2>";
+                    return;
+                }
+            } else {
+                console.log("Operação inválida.");
+                document.getElementById('resultado').innerHTML = "<h2>Operação inválida.</h2>";
+                return;
+            }
+
+            // Exibe os resultados no console
+            console.log("Calculadora Simples");
+            console.log("1º Valor:\t" + valor1);
+            console.log("2º Valor:\t" + valor2);
+            console.log(operacao.charAt(0).toUpperCase() + operacao.slice(1) + ":\t" + resultado);
+
+            // Exibe os resultados na página web
+            document.getElementById('resultado').innerHTML = `
+                <h2>Calculadora Simples</h2>
+                <p>1º Valor: ${valor1}</p>
+                <p>2º Valor: ${valor2}</p>
+                <p>${operacao.charAt(0).toUpperCase() + operacao.slice(1)}: ${resultado}</p>
+            `;
+        }
+
+        // Chama a função principal para executar o programa
+        main();
+    </script>
+</body>
+</html>

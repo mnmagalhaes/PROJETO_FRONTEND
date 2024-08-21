@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+ 
+<body>
+ 
+    <style>
+ 
+        body{
+            display: flex;
+            justify-content: center;
+           
+        }
+        #container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
+ 
+ 
+        #containerR3R4 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
+ 
+        #containerR5R6 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
+ 
+        #relogio1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+ 
+        #relogio2 {
+            display: flex;
+            border: 0px solid black;
+            background-color: rgb(240, 224, 237);
+            padding: 15px;
+            height: 50px;
+            width: 200px;
+       margin-left: 160px;
+            align-items: center;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            border-radius: 10px;
+            box-shadow: 2px 2px 30px rgba(95, 95, 95, 0.417);
+        }
+ 
+        #display2 {
+            background-color: rgb(240, 224, 237);
+            padding: 5%;
+            border: 2px white;
+            width: auto;
+            height: auto;
+            border-radius: 10px;
+        }
+ 
+        #relogio3 {
+            display: flex;
+            border: 0px solid black;
+            background-color: white;
+            padding: 15px;
+            height: 50px;
+            width: 200px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            border-radius: 10px;
+            box-shadow: 2px 2px 30px rgba(95, 95, 95, 0.417);
+        }
+ 
+        #display3 {
+            background-color: rgb(240, 224, 237);
+            display: block;
+            padding: 5%;
+            border: 2px solid white;
+            width: auto;
+            height: auto;
+            border-radius: 10px;
+        }
+ 
+ 
+ 
+        #relogio4 {
+            flex-direction: column;
+            align-items: center;
+            border: 0px solid black;
+            background-color: white;
+            padding: 15px;
+            width: 250px;
+            height: 100px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 30px;
+            margin-left: 100px;
+        }
+ 
+        #display4 {
+            display: flex;
+            padding: 15px;
+            border: 2px solid rgb(221, 211, 219);
+            background-color: rgb(255, 246, 253);
+            border-radius: 10px;
+            margin: 0 5px;
+        }
+ 
+        #data4 {
+            font-size: 15px;
+            margin: 0 auto;
+            border-radius: 5px;
+            font-weight: bolder;
+        }
+ 
+        #formdata4 {
+            margin-bottom: 10px;
+        }
+ 
+        #displayg4 {
+            display: flex;
+            align-items: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+ 
+        #relogio5 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 0px solid rgb(0, 0, 0);
+            background-color: rgb(255, 187, 60);
+            padding: 15px;
+            width: 250px;
+            height: 100px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 30px;
+        }
+ 
+        #display5 {
+            display: flex;
+            padding: 15px;
+            border: 2px solid rgb(0, 0, 0);
+            background-color: rgb(0, 0, 0);
+            margin: 0 5px;
+            color: white;
+            border-bottom: 5px white solid;
+        }
+ 
+        #data5 {
+            font-size: 15px;
+            margin: 0 auto;
+            border-radius: 2px;
+            font-weight: bolder;
+            color: black;
+        }
+ 
+        #formdata5 {
+            margin-bottom: 10px;
+        }
+ 
+        #displayg5 {
+            display: flex;
+            align-items: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+ 
+        #relogio6 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 0px solid white;
+            background: url('https://www.geekfolk.com.br/wp-content/uploads/2017/06/mulher-maravilha.jpg');
+            background-position: center;
+            width: 700px;
+            height: 380px;
+            border-radius: 30px;
+            margin-left: 50px;
+            justify-content: center;
+        }
+ 
+        #display6 {
+            display: flex;
+            padding: 15px;
+            border: 2px solid red;
+            background-color: white;
+            margin: 0 5px;
+            color: black;
+            border-radius: 30px;
+        }
+ 
+        #data6 {
+            font-size: 40px;
+            margin: 0 auto;
+            border-radius: 2px;
+            font-weight: bolder;
+            color: white;
+        }
+ 
+        #formdata6 {
+            margin-bottom: 10px;
+        }
+ 
+        #displayg6 {
+            display: flex;
+            align-items: center;
+            font-size: 40px;
+            font-weight: bold;
+            color: white;
+        }
+    </style>
+ 
+    <main>
+        <!-- Apenas começo relogio 1 e 2 -->
+        <div id="container">
+                <div id="relogio1">
+                    <div id="display1">
+                        <div id="horas1"></div>
+                    </div>
+                    <p>:</p>
+                    <div id="display1">
+                        <div id="minutos1"></div>
+                    </div>
+                    <p>:</p>
+                    <div id="display1">
+                        <div id="segundos1"></div>
+                    </div>
+                </div>
+                <div id="relogio2">
+                    <div id="display2">
+                        <div id="horas2"></div>
+                    </div>
+                    <p>:</p>
+                    <div id="display2">
+                        <div id="minutos2"></div>
+                    </div>
+                    <p>:</p>
+                    <div id="display2">
+                        <div id="segundos2"></div>
+                    </div>
+                </div>
+        </div>
+ 
+        <!-- Apenas começo relogio 3 e 4 -->
+ 
+        <div id="containerR3R4">
+            <div id="relogio3">
+                <div id="display3">
+                    <div id="horas3"></div>
+                </div>
+                <p>:</p>
+                <div id="display3">
+                    <div id="minutos3"></div>
+                </div>
+                <p>:</p>
+                <div id="display3">
+                    <div id="segundos3"></div>
+                </div>
+            </div>
+ 
+            <div id="relogio4">
+                <div id="formdata4">
+                    <h1 id="data4"></h1>
+                </div>
+ 
+                <div id="displayg4">
+                    <div id="display4">
+                        <div id="horas4"></div>
+                    </div>
+ 
+                    <p>:</p>
+ 
+                    <div id="display4">
+                        <div id="minutos4"></div>
+                    </div>
+ 
+                    <p>:</p>
+ 
+                    <div id="display4">
+                        <div id="segundos4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="containerR5R6">
+            <!-- relogio 5 -->
+            <div id="relogio5">
+ 
+                <div id="formadata5">
+                    <h1 id="data5"></h1>
+                </div>
+ 
+                <div id="displayg5">
+                    <div id="display5">
+                        <div id="horas5"></div>
+                    </div>
+ 
+                    <p>:</p>
+ 
+                    <div id="display5">
+                        <div id="minutos5"></div>
+                    </div>
+ 
+                    <p>:</p>
+ 
+                    <div id="display5">
+                        <div id="segundos5"></div>
+                    </div>
+                </div>
+ 
+            </div>
+            <div id="relogio6">
+ 
+                <div id="formadata6">
+                    <h1 id="data6"></h1>
+                </div>
+ 
+                <div id="displayg6">
+                   <div id="display6">
+                        <div id="horas6"></div>
+                    </div>
+ 
+                    <p>:</p>
+ 
+                    <div id="display6">
+                        <div id="minutos6"></div>
+                    </div>
+ 
+                    <p>:</p>
+ 
+                    <div id="display6">
+                        <div id="segundos6"></div>
+                    </div>
+                </div>
+                <img src="https://www.geekfolk.com.br/wp-content/uploads/2017/06/mulher-maravilha.jpg" alt="" width="70">
+            </div>
+ 
+ 
+        </div>
+        <script>
+            const horas = document.getElementById('horas');
+            const minutos = document.getElementById('minutos');
+            const segundos = document.getElementById('segundos');
+ 
+            const relogio = setInterval(function time() {
+ 
+                let tempo = new Date();
+                let h = tempo.getHours();
+                let m = tempo.getMinutes();
+                let s = tempo.getSeconds();
+ 
+                if (h < 10) h = '0' + h;
+                if (m < 10) m = '0' + m;
+                if (s < 10) s = '0' + s;
+ 
+                horas1.textContent = h;
+                minutos1.textContent = m;
+                segundos1.textContent = s;
+ 
+                horas2.textContent = h;
+                minutos2.textContent = m;
+                segundos2.textContent = s;
+ 
+                horas3.textContent = h;
+                minutos3.textContent = m;
+                segundos3.textContent = s;
+ 
+                horas4.textContent = h;
+                minutos4.textContent = m;
+                segundos4.textContent = s;
+ 
+                horas5.textContent = h;
+                minutos5.textContent = m;
+                segundos5.textContent = s;
+ 
+                horas6.textContent = h;
+                minutos6.textContent = m;
+                segundos6.textContent = s;
+            })
+ 
+ 
+            let data = new Date();
+            let dia = data.getDate();
+            let diaSemana = data.getDay();
+            let mes = data.getMonth() + 1;
+            let ano = data.getFullYear();
+ 
+            let ds;
+            if (diaSemana === 0) { ds = 'Domingo' }
+            else if (diaSemana === 1) { ds = 'Segunda-feira' }
+            else if (diaSemana === 2) { ds = 'Terça-feira' }
+            else if (diaSemana === 3) { ds = 'Quarta-feira' }
+            else if (diaSemana === 4) { ds = 'Quinta-feira' }
+            else if (diaSemana === 5) { ds = 'Sexta-feira' }
+            else if (diaSemana === 6) { ds = 'Sabado-feira' }
+ 
+            let mesAno;
+            if (mes === 1) (mesAno = 'Janeiro');
+            else if (mes === 2) { mesAno = 'Fevereiro' }
+            else if (mes === 3) { mesAno = 'Março' }
+            else if (mes === 4) { mesAno = 'Abril' }
+            else if (mes === 5) { mesAno = 'Maio' }
+            else if (mes === 6) { mesAno = 'Junho' }
+            else if (mes === 7) { mesAno = 'Julho' }
+            else if (mes === 8) { mesAno = 'Agosto' }
+ 
+            let dataCompleta = ds + ', ' + dia + ' de ' + mesAno + ' de ' + ano;
+            document.getElementById('data4').textContent = dataCompleta;
+            document.getElementById('data5').textContent = dataCompleta;
+            document.getElementById('data6').textContent = dataCompleta;
+        </script>
+ 
+</body>
+ 
+</html>
+ 

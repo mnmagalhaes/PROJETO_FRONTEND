@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .body{
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+ 
+        .container{
+            display: flex;
+            gap: 30px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+ 
+        .form{
+            width: 300px;
+        }
+        .h2{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .label{
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 90%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+ 
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            width: 90%;
+            font-size: 16px;
+        }
+ 
+        button:hover {
+            background-color: #45a049;
+        }
+ 
+        .login-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+ 
+        .login-container svg {
+            width: 80px;
+            height: 80px;
+            fill: #008CBA;
+            margin-bottom: 20px;
+        }
+ 
+        .login-container input {
+            margin-bottom: 10px;
+        }
+ 
+        .login-container button {
+            margin-bottom: 10px;
+        }
+ 
+        .login-container .checkbox {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+ 
+        .login-container .checkbox input[type="checkbox"] {
+            margin-right: 5px;
+        }
+ 
+        .login-container a {
+            text-decoration: none;
+            color: #008CBA;
+        }
+    </style>
+    <div class="container">
+    <!--INPUT: Adiciona o espaço para que o usuário prencha conforme solicitação da pág.-->
+        <form id="cadastro form">
+            <h2>Cadastro</h2>
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" required>
+ 
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+ 
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha" required>
+ 
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+ 
+    <div class="login-form">
+        <h2>Formulário de Login</h2>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
+            <path d="M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6z" />
+        </svg>
+        <form id="login-form">
+            <label for="usuario">Usuário:</label>
+            <input type="text" id="usuario" name="usuario" required>
+        </form>
+ 
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exibir Imagem Múltiplas Vezes</title>
+    <style>
+        .imagem {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>1000 Vezes Wonder Woman</h1>
+    <div id="imagens-container"></div>
+
+    <script>
+        
+        function adicionarImagens() {
+            const container = document.getElementById('imagens-container');
+            const imagem = document.createElement('img');
+            imagem.src = 'https://www.geekfolk.com.br/wp-content/uploads/2017/06/mulher-maravilha.jpg'; // URL da imagem fornecida
+            imagem.className = 'imagem';
+
+            for (let i = 0; i < 1000; i++) {
+                const novaImagem = imagem.cloneNode();
+                container.appendChild(novaImagem);
+            }
+        }
+
+        adicionarImagens();
+    </script>
+</body>
+</html>
